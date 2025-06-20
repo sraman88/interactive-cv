@@ -1,201 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Mario Interactive CV</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: #87CEEB;
-            font-family: 'Arial', sans-serif;
-        }
-        canvas {
-            display: block;
-            width: 100%;
-            height: 100vh;
-        }
-        .cv-section {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 350px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            display: none;
-            z-index: 10;
-        }
-        .cv-section h2 {
-            color: #d11313;
-            font-size: 24px;
-            margin: 0 0 10px;
-        }
-        .cv-section p, .cv-section ul {
-            color: #333;
-            font-size: 14px;
-            margin: 5px 0;
-        }
-        .cv-section ul {
-            padding-left: 20px;
-        }
-        .cv-section li {
-            margin-bottom: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shankar's Mario CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: linear-gradient(to top, #87CEEB 70%, #ffffff 30%);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #ffcc00;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 5px solid #e59400;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      border-bottom: 2px dashed #ccc;
+    }
+    .level-title {
+      background: #e60012;
+      color: #fff;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .skills, .fun-facts, .contact {
+      background: #ffd700;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #000;
+    }
+    .coin {
+      display: inline-block;
+      animation: bounce 1s infinite;
+      margin-right: 10px;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 2rem;
+    }
+  </style>
 </head>
 <body>
-    <div id="objective" class="cv-section" style="left: 50px; top: 50px;">
-        <h2>Objective</h2>
-        <p>Experienced Tech Recruitment Leader with 15 years of expertise attracting top talent across diverse skill sets and platforms. Strategic solution consultant for Hiring Managers, adept at building talent pipelines and optimizing processes for seamless recruitment and onboarding. Skilled in sourcing exceptional candidates through multiple channels, ensuring organizational success.</p>
-    </div>
-    <div id="skills" class="cv-section" style="left: 450px; top: 50px;">
-        <h2>Key Skills</h2>
-        <ul>
-            <li>Tech Recruiting</li>
-            <li>Leadership</li>
-            <li>Stakeholder Management</li>
-            <li>Program Management</li>
-            <li>Employer Branding</li>
-        </ul>
-    </div>
-    <div id="experience" class="cv-section" style="left: 50px; top: 300px;">
-        <h2>Experience</h2>
-        <p><strong>Recruiting Leader, OpenText</strong> (Mar 2023 – Present)</p>
-        <ul>
-            <li>Leading Tech, Semi-tech, Finance, Marketing & HR recruiting for India, reducing time-to-fill by 20%.</li>
-            <li>Recruited Principal and Leadership roles in Engineering and Business teams.</li>
-            <li>Managed a team of 12 recruiters, optimized RPO processes, and increased tech hire diversity by 30%.</li>
-            <li>Achieved 95% candidate satisfaction rate.</li>
-        </ul>
-        <p><strong>Freelancer, Out of the Blue.Ai</strong> (Dec 2022 – Feb 2023)</p>
-        <ul>
-            <li>Built TA and HR functions, focusing on Engineering and Product teams.</li>
-            <li>Developed metrics-driven talent attraction and employer branding strategies.</li>
-            <li>Trained teams on best practices and drove employee engagement.</li>
-        </ul>
-        <p><strong>Recruiting Leader, Browserstack</strong> (Apr 2022 – Dec 2022)</p>
-        <ul>
-            <li>Led hiring for Product, Design, and Engineering teams, ensuring high candidate acceptance ratios.</li>
-            <li>Managed cross-functional projects like candidate experience and diversity hiring.</li>
-        </ul>
-        <p><strong>Lead Executive Recruiter, Target</strong> (Jan 2019 – Apr 2022)</p>
-        <ul>
-            <li>Drove tech talent acquisition, sourcing AI, ML, Java, Go-Lang, and other developers.</li>
-            <li>Built talent pipelines, reducing hiring lead time, and led strategic projects.</li>
-        </ul>
-        <p><strong>Group Manager TA, WNS</strong> (Jun 2014 – Dec 2018)</p>
-        <ul>
-            <li>Managed recruitment for Research & Analytics, leading a team of 6 recruiters.</li>
-            <li>Built relationships with campuses and training organizations for talent sourcing.</li>
-        </ul>
-        <p><strong>Sr Lead Consultant, Recruise India Consulting</strong> (Sep 2010 – Mar 2014)</p>
-        <ul>
-            <li>Recruited for niche leadership roles in IT, Management Consulting, and Analytics.</li>
-            <li>Conducted talent research and managed a team of 6 resources.</li>
-        </ul>
-    </div>
-    <div id="education" class="cv-section" style="left: 450px; top: 300px;">
-        <h2>Education</h2>
-        <p><strong>BE, Mechanical Engineering</strong></p>
-    </div>
+  <header>
+    <h1>Shankar Raman | Tech Recruitment Leader | 15+ Years</h1>
+  </header>
 
-    <script>
-        let mario;
-        let marioImg;
-        let coinSound;
-        let groundY;
-        let sections;
-        let bgX = 0;
-        let bgSpeed = 1;
-        let isJumping = false;
-        let jumpVelocity = -10;
-        let marioY;
-        let velocityY = 0;
-        let gravity = 0.5;
-        let visibleSections = new Set();
+  <section>
+    <p>I’m a tech recruitment leader with over 15 years of experience helping companies build high-performing teams across product, SaaS, and enterprise technology spaces. I specialize in hiring across all levels — from full-stack engineers and data scientists to directors and VPs — with a focus on speed, quality, and candidate experience.</p>
+    <p>I’ve led recruitment across Engineering, Product, Finance, Marketing, and HR, while managing recruiter teams and working with global leaders. I’m passionate about DEI hiring, employer branding, and building inclusive, scalable talent strategies.</p>
+  </section>
 
-        function preload() {
-            marioImg = loadImage('https://www.spriters-resource.com/resources/sheets/143/146081.png?updated=1596478489');
-            coinSound = loadSound('https://www.sounds-resource.com/download/41775/');
-        }
+  <section>
+    <div class="level-title">🏰 Level 1 – OpenText</div>
+    <ul>
+      <li>Leading Tech + Business hiring across India</li>
+      <li>Built leadership pipelines, led 12-member TA team</li>
+      <li>Improved diversity by 30%, reduced time-to-fill by 20%</li>
+    </ul>
+  </section>
 
-        function setup() {
-            createCanvas(windowWidth, windowHeight);
-            groundY = height - 50;
-            marioY = groundY;
-            mario = createSprite(width / 2, groundY);
-            mario.addImage(marioImg);
-            mario.scale = 0.05;
-            sections = [
-                { id: 'objective', x: 50, y: 50, w: 350, h: 150 },
-                { id: 'skills', x: 450, y: 50, w: 350, h: 150 },
-                { id: 'experience', x: 50, y: 300, w: 350, h: 350 },
-                { id: 'education', x: 450, y: 300, w: 350, h: 100 }
-            ];
-        }
+  <section>
+    <div class="level-title">🌉 Level 2 – Browserstack</div>
+    <ul>
+      <li>Owned hiring for Product, Design & Engineering</li>
+      <li>Drove DEI and candidate experience initiatives</li>
+    </ul>
+  </section>
 
-        function draw() {
-            background('#87CEEB');
-            bgX -= bgSpeed;
-            if (bgX <= -width) bgX = 0;
-            for (let x = bgX; x < width; x += 50) {
-                fill(139, 69, 19);
-                rect(x, groundY - 50, 50, 50);
-                if (x % 200 === 0) {
-                    fill(0, 255, 0);
-                    rect(x, groundY - 100, 50, 50);
-                }
-            }
-            fill(0, 128, 0);
-            rect(0, groundY, width, 50);
+  <section>
+    <div class="level-title">🌀 Level 3 – Target</div>
+    <ul>
+      <li>Led hiring for AI/ML, GoLang, Data & Architecture roles</li>
+      <li>Shortened hiring lead time and built market maps</li>
+    </ul>
+  </section>
 
-            if (isJumping) {
-                velocityY += gravity;
-                marioY += velocityY;
-                if (marioY >= groundY) {
-                    marioY = groundY;
-                    isJumping = false;
-                    velocityY = 0;
-                }
-            }
-            mario.position.x = constrain(mouseX, 0, width);
-            mario.position.y = marioY;
-            drawSprites();
+  <section>
+    <div class="level-title">🧠 Level 4 – WNS</div>
+    <ul>
+      <li>Built tech & analytics teams for R&A vertical</li>
+      <li>Led a 6-member team; developed campus strategy</li>
+    </ul>
+  </section>
 
-            sections.forEach(section => {
-                let element = document.getElementById(section.id);
-                if (mouseX > section.x && mouseX < section.x + section.w &&
-                    mouseY > section.y && mouseY < section.y + section.h) {
-                    if (!visibleSections.has(section.id)) {
-                        element.style.display = 'block';
-                        if (coinSound.isLoaded()) coinSound.play();
-                        visibleSections.add(section.id);
-                    }
-                } else {
-                    element.style.display = 'none';
-                    visibleSections.delete(section.id);
-                }
-            });
-        }
+  <section>
+    <div class="level-title">🛠️ Level 5 – Recruise India Consulting</div>
+    <ul>
+      <li>Leadership hiring across IT, Consulting & Analytics</li>
+      <li>Client strategy + talent research; managed 6 recruiters</li>
+    </ul>
+  </section>
 
-        function mousePressed() {
-            if (!isJumping) {
-                isJumping = true;
-                velocityY = jumpVelocity;
-            }
-        }
+  <section class="skills">
+    <strong>🛠️ Skills & Tools:</strong>
+    <ul>
+      <li>Leadership Hiring • DEI Sourcing • RPO Management</li>
+      <li>Stakeholder Engagement • Phenom • SuccessFactors</li>
+      <li>Campus Hiring • Market Mapping • Team Mentoring</li>
+    </ul>
+  </section>
 
-        function windowResized() {
-            resizeCanvas(windowWidth, windowHeight);
-            groundY = height - 50;
-            marioY = groundY;
-            mario.position.y = marioY;
-        }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.play.min.js"></script>
+  <section class="fun-facts">
+    <strong>🪙 Fun Facts:</strong>
+    <ul>
+      <li><span class="coin">🟡</span> Gamer at heart — but I don’t ghost candidates</li>
+      <li><span class="coin">🟡</span> Can build full-stack teams in record time</li>
+      <li><span class="coin">🟡</span> 50% gut, 50% data — 100% explaining it to stakeholders</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <strong>📬 Contact Me:</strong>
+    <p>Email: <a href="mailto:fortunate.gui@gmail.com">fortunate.gui@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shankar111" target="_blank">linkedin.com/in/shankar111</a></p>
+  </section>
+
+  <footer>
+    Made with ❤️ + 🕹️ by Shankar Raman | Mario CV Theme
+  </footer>
 </body>
 </html>
